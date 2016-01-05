@@ -8,7 +8,7 @@
 	stopOnIncomplete="false"
 	stopOnSkipped="false">
 
-	<testsuite name="Default Test Suite">
+	<testsuite name="Default Tests">
 		<directory>tests/</directory>
 	</testsuite>
 

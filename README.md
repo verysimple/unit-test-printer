@@ -22,18 +22,22 @@ If you do not use composer, you can download and save `VerboseTestResultPrinter.
 
 ## Usage
 
-To use the `VerboseTestResultPrinter` class, it is specified in your `phpunit.xml` config file, which is generally in your project root. The following assumes `phpunit.xml` is in your root directory and your tests are located in a sub-directory named "tests".
+To use the `VerboseTestResultPrinter` class, it is specified in your `phpunit.xml` config file. The following assumes `phpunit.xml` is in your project root directory and your tests are located in a sub-directory named "tests".
 
 	<phpunit
 		colors="true"
 		printerClass="Verysimple\UnitTest\VerboseTestResultPrinter"
-		printerFile="vendor/verysimple/unit-test-printer/src/Verysimple/UnitTest/VerboseTestResultPrinter.php"
+		printerFile="vendor/autoload.php"
 		>
 	
-		<testsuite name="Default Test Suite">
+		<testsuite name="Default Tests">
 			<directory>tests/</directory>
 		</testsuite>
 	
 	</phpunit>
 
-Run phpunit from the root directory of the project.
+Alternatively you can add simply make sure the library is included in your test runner. For example, adding the following to your `phpunit_bootstrap.php file`:
+
+	require __DIR__.'/vendor/autoload.php';
+
+To run unit tests, execute phpunit from the root directory of the project.
