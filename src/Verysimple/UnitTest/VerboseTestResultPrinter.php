@@ -1,5 +1,7 @@
 <?php
-namespace Verysimple\UnitTest;
+// This should exist in a namespace, however it makes the printers
+// nearly impossible to use in a typical phpunit setup
+// namespace Verysimple\UnitTest;
 
 /**
  * @package libs
@@ -8,7 +10,7 @@ namespace Verysimple\UnitTest;
 /**
  * This test listener outputs the name as each test is running
  * instead of simply printing progress dots as the tests run
- * @version 1.2
+ * @version 1.0.2
  * @author Jason Hinkle <verysimple.com>
  */
 class VerboseTestResultPrinter extends PHPUnit_TextUI_ResultPrinter
@@ -92,15 +94,15 @@ class VerboseTestResultPrinter extends PHPUnit_TextUI_ResultPrinter
 		parent::startTestSuite($suite);
 
 		if (!$this->headerPrinted) {
-			$header = "  _____  _    _ _____  _    _       _ _   
- |  __ \| |  | |  __ \| |  | |     (_) |  
- | |__) | |__| | |__) | |  | |_ __  _| |_ 
- |  ___/|  __  |  ___/| |  | | '_ \| | __|
- | |    | |  | | |    | |__| | | | | | |_ 
- |_|    |_|  |_|_|     \____/|_| |_|_|\__|";
+			$header = "██████╗ ██╗  ██╗██████╗ ██╗   ██╗███╗   ██╗██╗████████╗
+██╔══██╗██║  ██║██╔══██╗██║   ██║████╗  ██║██║╚══██╔══╝
+██████╔╝███████║██████╔╝██║   ██║██╔██╗ ██║██║   ██║   
+██╔═══╝ ██╔══██║██╔═══╝ ██║   ██║██║╚██╗██║██║   ██║   
+██║     ██║  ██║██║     ╚██████╔╝██║ ╚████║██║   ██║   
+╚═╝     ╚═╝  ╚═╝╚═╝      ╚═════╝ ╚═╝  ╚═══╝╚═╝   ╚═╝  ";
 
 			$this->out($header,'fg-blue',true);
-			$this->out(" - - - - - - T E S T   A L L   T H E   T H I N G S - - - - - - ",'fg-blue',true);
+			$this->out(" - - - - T E S T   A L L   T H E   T H I N G S - - - - ",'fg-blue',true);
 			$this->out('','',true);
 			$this->headerPrinted = true;
 		}
