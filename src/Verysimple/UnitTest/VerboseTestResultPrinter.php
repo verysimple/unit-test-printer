@@ -8,7 +8,7 @@ namespace Verysimple\UnitTest;
 /**
  * This test listener outputs the name as each test is running
  * instead of simply printing progress dots as the tests run
- * @version 1.0.3
+ * @version 1.1.0
  * @author Jason Hinkle <verysimple.com>
  */
 class VerboseTestResultPrinter extends \PHPUnit_TextUI_ResultPrinter
