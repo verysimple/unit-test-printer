@@ -1,6 +1,6 @@
-# unit-test-printer
+# Verysimple Unit Test Printer
 
-PHPUnit ResultPrinter implementation that outputs verbose test information.
+PHPUnit ResultPrinter implementation that outputs verbose test information. Rather than see a string of dots and letters, this unit test printer will display the name of the suite and tests and number of assertions. If you manually run your tests and watch then running, you can more easily see the progress of your tests.
 
 ![](https://raw.githubusercontent.com/verysimple/unit-test-printer/master/assets/images/screenshot.jpg)
 
