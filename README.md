@@ -26,7 +26,7 @@ To use the `VerboseTestResultPrinter` class, it is specified in your `phpunit.xm
 
 	<phpunit
 		colors="true"
-		printerClass="VerboseTestResultPrinter"
+		printerClass="Verysimple\UnitTest\VerboseTestResultPrinter"
 		printerFile="vendor/verysimple/unit-test-printer/src/Verysimple/UnitTest/VerboseTestResultPrinter.php"
 		>
 	
