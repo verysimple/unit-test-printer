@@ -1,0 +1,13 @@
+{
+	"name": "verysimple/unit-test-printer",
+	"description": "Verbose PHPUnit ResultPrinter",
+	"version": "1.0.0",
+	"require": {
+		"php": ">=5.4.0"
+	},
+	"autoload": {
+		"classmap": [
+			"Verysimple/UnitTest"
+		]
+	}
+}
