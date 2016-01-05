@@ -2,6 +2,8 @@
 
 PHPUnit ResultPrinter implementation that outputs verbose test information.
 
+![](https://raw.githubusercontent.com/verysimple/unit-test-printer/master/assets/images/screenshot.jpg)
+
 ## Installation
 
 Install VerboseTestResultPrinter class with composer:
