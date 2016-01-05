@@ -34,4 +34,4 @@ To use the `VerboseTestResultPrinter` class, it is specified in your `phpunit.xm
 	
 	</phpunit>
 
-When running phpunit, be sure that the project root directory is your currently directory.
+Run phpunit from the root directory of the project.
