@@ -1,7 +1,5 @@
 <?php
-// This should exist in a namespace, however it makes the printers
-// nearly impossible to use in a typical phpunit setup
-// namespace Verysimple\UnitTest;
+namespace Verysimple\UnitTest;
 
 /**
  * @package libs
@@ -10,10 +8,10 @@
 /**
  * This test listener outputs the name as each test is running
  * instead of simply printing progress dots as the tests run
- * @version 1.0.2
+ * @version 1.0.3
  * @author Jason Hinkle <verysimple.com>
  */
-class VerboseTestResultPrinter extends PHPUnit_TextUI_ResultPrinter
+class VerboseTestResultPrinter extends \PHPUnit_TextUI_ResultPrinter
 {
 
 	private $headerPrinted = false;
@@ -40,7 +38,7 @@ class VerboseTestResultPrinter extends PHPUnit_TextUI_ResultPrinter
 	/**
 	 * Fired prior to each individual test
 	 */
-	public function startTest(PHPUnit_Framework_Test $test)
+	public function startTest(\PHPUnit_Framework_Test $test)
 	{
 		$this->out(">> RUN '".$test->getName()."'...");
 	}
@@ -50,7 +48,7 @@ class VerboseTestResultPrinter extends PHPUnit_TextUI_ResultPrinter
 	 * @param PHPUnit_Framework_TestCase
 	 * @param int time of execution
 	 */
-	public function endTest(PHPUnit_Framework_Test $test, $time)
+	public function endTest(\PHPUnit_Framework_Test $test, $time)
 	{
 
 		// copied from parent:endTest()
@@ -89,7 +87,7 @@ class VerboseTestResultPrinter extends PHPUnit_TextUI_ResultPrinter
 	/**
 	 * called at the initialization of each test suite
 	 */
-	public function startTestSuite(PHPUnit_Framework_TestSuite $suite)
+	public function startTestSuite(\PHPUnit_Framework_TestSuite $suite)
 	{
 		parent::startTestSuite($suite);
 
@@ -110,7 +108,7 @@ class VerboseTestResultPrinter extends PHPUnit_TextUI_ResultPrinter
 		if ($suite->getName() != 'PHPUnit') $this->out("BEGIN SUITE '".$suite->getName()."'\n");
 	}
 
-	public function endTestSuite(PHPUnit_Framework_TestSuite $suite)
+	public function endTestSuite(\PHPUnit_Framework_TestSuite $suite)
 	{
 		if ($suite->getName() != 'PHPUnit') $this->out("END SUITE '".$suite->getName()."'\n\n");
 	}
