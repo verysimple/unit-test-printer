@@ -6,7 +6,7 @@ namespace Verysimple\UnitTest;
  * instead of simply printing progress dots as the tests run.
  * See README.md for usage instructions
  * 
- * @version 1.1.0
+ * @version 1.1.1
  * @author Verysimple, Inc. <verysimple.com>
  */
 class VerboseTestResultPrinter extends \PHPUnit_TextUI_ResultPrinter
@@ -50,10 +50,10 @@ class VerboseTestResultPrinter extends \PHPUnit_TextUI_ResultPrinter
 	{
 
 		// copied from parent:endTest()
-		if ($test instanceof PHPUnit_Framework_TestCase) {
+		if ($test instanceof \PHPUnit_Framework_TestCase) {
 			$this->numAssertions += $test->getNumAssertions();
 		}
-		else if ($test instanceof PHPUnit_Extensions_PhptTestCase) {
+		else if ($test instanceof \PHPUnit_Extensions_PhptTestCase) {
 			$this->numAssertions++;
 		}
 		$this->lastTestFailed = false;
@@ -69,7 +69,7 @@ class VerboseTestResultPrinter extends \PHPUnit_TextUI_ResultPrinter
 		}
 		else {
 
-			$numAssertions = ($test instanceof PHPUnit_Framework_TestCase) ? $test->getNumAssertions() : 1;
+			$numAssertions = ($test instanceof \PHPUnit_Framework_TestCase) ? $test->getNumAssertions() : 1;
 
 			if ($numAssertions > 0) {
 				$this->out(' OK (' . $numAssertions . ' assertions)','fg-green',true);

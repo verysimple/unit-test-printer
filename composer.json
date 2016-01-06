@@ -3,7 +3,7 @@
 	"description": "Formats PHPUnit output with verbose information about tests as they run.",
 	"homepage": "https://github.com/verysimple/unit-test-printer",
 	"keywords": ["phpunit","php","unit test","resultprinter","formatter"],
-	"version": "1.1.0",
+	"version": "1.1.1",
 	"license": "MIT",
 	"require": {
 		"php": ">=5.4.0"
