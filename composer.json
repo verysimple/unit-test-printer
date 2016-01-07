@@ -12,5 +12,21 @@
 		"classmap": [
 			"src/Verysimple/UnitTest"
 		]
-	}
+	},
+	"scripts": {
+        "uninstall": [
+        	"rm -rf vendor",
+        	"rm -rf composer.lock"
+        	],
+        "build": [
+        	"composer run-script uninstall",
+        	"composer install --no-dev"
+        	],
+        "test": "phpunit",
+        "coverage": [
+            "rm -f tests-coverage",
+            "mkdir tests-coverage",
+            "phpunit --coverage-html ./tests-coverage"
+        ]
+    }
 }
